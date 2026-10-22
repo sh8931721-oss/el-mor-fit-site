@@ -2,163 +2,202 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#71816B">
-  <title>El Mor Fit | المر فيت</title>
-  <style>
-    :root {
-      --sage: #71816B;
-      --olive: #A3AA87;
-      --cream: #F8F6F0;
-      --charcoal: #30352F;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--cream);
-      color: var(--charcoal);
-      line-height: 1.8;
-    }
-
-    header {
-      padding: 22px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fff;
-      border-bottom: 1px solid #e8e6de;
-    }
-
-    .brand {
-      color: var(--sage);
-      font-size: 23px;
-      font-weight: bold;
-    }
-
-    .brand span {
-      display: block;
-      font-size: 13px;
-      color: var(--charcoal);
-      font-weight: normal;
-    }
-
-    .hero {
-      max-width: 900px;
-      margin: 55px auto;
-      padding: 35px 22px;
-      text-align: center;
-    }
-
-    .tag {
-      color: var(--sage);
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    h1 {
-      font-size: clamp(30px, 6vw, 48px);
-      line-height: 1.5;
-      margin: 18px 0;
-    }
-
-    h1 span { color: var(--sage); }
-
-    .intro {
-      max-width: 620px;
-      margin: 0 auto 28px;
-      color: #62675E;
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--sage);
-      color: white;
-      text-decoration: none;
-      padding: 12px 26px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      max-width: 950px;
-      margin: 0 auto 55px;
-      padding: 0 20px;
-    }
-
-    .feature {
-      background: white;
-      padding: 24px;
-      border-radius: 14px;
-      border: 1px solid #e9e7df;
-    }
-
-    .feature h2 {
-      color: var(--sage);
-      font-size: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px;
-      background: #eeece3;
-      font-size: 14px;
-    }
-
-    @media (max-width: 480px) {
-      header { padding: 16px 5%; }
-      .hero { margin: 25px auto; }
-      .intro { font-size: 16px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#71816B">
+<title>El Mor Fit | المر فيت</title>
+<style>
+:root {
+  --sage:#71816B;
+  --olive:#A3AA87;
+  --cream:#F8F6F0;
+  --dark:#30352F;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+  line-height:1.9;
+}
+header{
+  background:#fff;
+  padding:16px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  border-bottom:1px solid #e8e6de;
+}
+.brand{font-size:23px;font-weight:bold;color:var(--sage)}
+.brand small{display:block;font-size:13px;color:var(--dark);font-weight:normal}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:var(--dark);text-decoration:none;font-size:14px}
+.hero{
+  text-align:center;
+  max-width:850px;
+  margin:auto;
+  padding:70px 22px 55px;
+}
+.tag{color:var(--sage);font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.5;margin:15px 0}
+h1 span{color:var(--sage)}
+.intro{font-size:18px;color:#62675e;max-width:620px;margin:0 auto 28px}
+.button{
+  display:inline-block;
+  background:var(--sage);
+  color:white;
+  text-decoration:none;
+  padding:11px 23px;
+  border:0;
+  border-radius:8px;
+  font:inherit;
+  font-weight:bold;
+  cursor:pointer;
+}
+.button.secondary{background:transparent;color:var(--sage);border:1px solid var(--sage)}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.section-title{text-align:center;margin:25px 15px 28px}
+.section-title h2{color:var(--sage)}
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  max-width:1000px;
+  padding:0 20px;
+  margin:0 auto 65px;
+}
+.feature,.panel{
+  background:white;
+  padding:23px;
+  border-radius:14px;
+  border:1px solid #e9e7df;
+}
+.feature h3{color:var(--sage)}
+section[id]{scroll-margin-top:20px}
+.about,.contact{
+  max-width:760px;
+  margin:0 auto 55px;
+  padding:0 20px;
+}
+.panel{padding:28px}
+label{display:block;font-weight:bold;margin:12px 0 5px}
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d7d8ce;
+  border-radius:8px;
+  background:#fff;
+  font:inherit;
+}
+textarea{min-height:95px;resize:vertical}
+.note{font-size:13px;color:#666b61}
+footer{text-align:center;padding:25px;background:#eeece3;font-size:14px}
+@media(max-width:600px){
+  header{align-items:flex-start;flex-direction:column}
+  nav{gap:12px}
+  .hero{padding-top:40px}
+  .intro{font-size:16px}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="brand">
-      El Mor Fit
-      <span>المر فيت | التغذية والصحة</span>
-    </div>
-  </header>
+<header>
+  <div class="brand">El Mor Fit
+    <small>المر فيت | التغذية والصحة</small>
+  </div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#services">الخدمات</a>
+    <a href="#about">عن El Mor Fit</a>
+    <a href="#contact">التواصل</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <p class="tag">YOUR WELLNESS JOURNEY</p>
-      <h1>صحتك تبدأ من <span>اختياراتك</span></h1>
-      <p class="intro">
-        مساحة تهتم بالتغذية المتوازنة والعادات الصحية،
-        بخطوات عملية تناسب حياتك وأهدافك.
-      </p>
-      <a class="button" href="#services">اكتشفي خدماتنا</a>
-    </section>
+<main>
+<section class="hero" id="home">
+  <p class="tag">YOUR WELLNESS JOURNEY</p>
+  <h1>صحتك تبدأ من <span>اختياراتك</span></h1>
+  <p class="intro">مساحة تهتم بالتغذية المتوازنة والعادات الصحية، بخطوات عملية تناسب حياتك وأهدافك.</p>
+  <div class="actions">
+    <a class="button" href="#services">اكتشفي خدماتنا</a>
+    <a class="button secondary" href="#contact">ابدئي رحلتك</a>
+  </div>
+</section>
 
-    <section class="features" id="services">
-      <article class="feature">
-        <h2>التغذية المتوازنة</h2>
-        <p>أفكار عملية لبناء عادات غذائية تناسب احتياجاتك اليومية.</p>
-      </article>
+<section id="services">
+  <div class="section-title">
+    <h2>خدمات El Mor Fit</h2>
+    <p>خطوات عملية لدعم عادات صحية مستدامة.</p>
+  </div>
+  <div class="features">
+    <article class="feature">
+      <h3>التغذية المتوازنة</h3>
+      <p>أفكار عملية لبناء عادات غذائية تناسب احتياجاتك اليومية.</p>
+    </article>
+    <article class="feature">
+      <h3>متابعة الأهداف</h3>
+      <p>تنظيم رحلة تغيير العادات ومراجعة التقدم خطوة بخطوة.</p>
+    </article>
+    <article class="feature">
+      <h3>التثقيف الغذائي</h3>
+      <p>معلومات مبسطة تساعدك على اتخاذ قرارات غذائية واعية.</p>
+    </article>
+  </div>
+</section>
 
-      <article class="feature">
-        <h2>متابعة الأهداف</h2>
-        <p>تنظيم رحلتك الصحية ومراجعة تقدمك خطوة بخطوة.</p>
-      </article>
+<section class="about" id="about">
+  <div class="panel">
+    <h2>عن El Mor Fit</h2>
+    <p>El Mor Fit مساحة للتوعية الغذائية ودعم العادات الصحية، بأسلوب عملي يراعي اختلاف الاحتياجات والأهداف.</p>
+    <p>المحتوى التثقيفي لا يغني عن التقييم الطبي أو المتابعة المتخصصة عند الحاجة.</p>
+  </div>
+</section>
 
-      <article class="feature">
-        <h2>التثقيف الغذائي</h2>
-        <p>معلومات غذائية مبسطة تساعدك على اتخاذ قرارات واعية.</p>
-      </article>
-    </section>
-  </main>
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>ابدئي رحلتك</h2>
+    <p>املئي البيانات الأساسية لفتح رسالة طلب تواصل.</p>
+  </div>
+  <div class="panel">
+    <form id="contactForm">
+      <label for="name">الاسم</label>
+      <input id="name" name="name" required maxlength="80" placeholder="اكتبي اسمك">
 
-  <footer>
-    Dt. Salma ElMor | El Mor Fit
-    <p>© 2026 El Mor Fit. جميع الحقوق محفوظة.</p>
-  </footer>
+      <label for="goal">هدفك الأساسي</label>
+      <select id="goal" name="goal" required>
+        <option value="">اختاري هدفك</option>
+        <option>تنظيم العادات الغذائية</option>
+        <option>إنقاص الوزن</option>
+        <option>زيادة الوزن</option>
+        <option>التثقيف الغذائي</option>
+        <option>هدف آخر</option>
+      </select>
+
+      <label for="message">رسالة مختصرة (اختياري)</label>
+      <textarea id="message" name="message" maxlength="500" placeholder="اكتبي استفسارك العام، من غير تفاصيل طبية أو بيانات حساسة"></textarea>
+
+      <p class="note">النموذج لا يحفظ البيانات ولا يرسلها تلقائيًا؛ سيجهز رسالة على واتساب بعد ضبط رقم التواصل.</p>
+      <button class="button" type="submit">تجهيز رسالة التواصل</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  Dt. Salma ElMor | El Mor Fit
+  <p>© 2026 El Mor Fit. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("status").textContent =
+    "النموذج جاهز، لكن يلزم إضافة رقم واتساب الرسمي لتفعيل إرسال الرسالة. بياناتك لم تُرسل.";
+});
+</script>
 </body>
 </html>
